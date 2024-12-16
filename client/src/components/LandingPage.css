@@ -1,0 +1,29 @@
+/* LandingPage.css */
+.landing-container {
+    text-align: center;
+    padding: 50px;
+    background-image: url('../images/bglp.jpg'); /* Path to bgl.jpg in images folder */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Takes the full viewport height */
+    color: white; /* All text color set to white */
+    font-weight: bold; /* Make all text bold */
+  }
+  
+  .landing-links-container {
+    margin-top: 20px;
+  }
+  
+  .landing-link {
+    display: block;
+    margin: 10px 0;
+    font-size: 20px;
+    color: white; /* Link text color set to white */
+    text-decoration: none;
+  }
+  
+  .landing-link:hover {
+    color: #007BFF; /* Add hover effect for the links */
+  }
+  

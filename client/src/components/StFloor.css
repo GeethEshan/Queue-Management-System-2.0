@@ -1,0 +1,173 @@
+html, body {
+  height: 100%; /* Ensure the body and html elements take up full height */
+  margin: 0; /* Remove default margin */
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  background-image: url('../images/bg1.jpg');
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Keeps the image centered */
+  height: 100%; /* Ensure the container takes full height */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+  
+  
+  
+.header {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  width: 100%;
+  color: black;
+  font-weight: bold; /* Added this line to make the text bold */
+}
+
+  
+  .sectionsWrapper1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 20px 30px; /* Reduced horizontal gap between sections */
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    min-height: 200px;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    background: linear-gradient(to bottom, rgba(30, 30, 30, 0.9), rgba(50, 50, 50, 0.9));
+    border-radius: 10px;
+  }
+  
+  .sectionTitle {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+    word-break: break-word;
+    text-shadow: 1px 1px 2px black;
+  }
+  
+  ul {
+    padding-left: 0;
+    margin-top: 95px;
+    list-style-type: none;
+  }
+  
+  .customerItem {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid black;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .customerItem .itemNumber {
+    margin-right: 10px;
+    width: 30px;
+    text-align: left;
+  }
+  
+  .customerItem .itemContent {
+    flex-grow: 1;
+  }
+  
+  .customerItem.serving {
+    background: linear-gradient(to right, rgba(40, 167, 69, 0.7), rgba(52, 208, 88, 0.7));
+    color: white;
+    margin-bottom: 35px;
+    position: relative;
+    animation: knightRider 2s infinite;
+    border: none;
+    font-size: 1.1rem;
+    box-shadow: 0px 4px 15px rgba(0, 255, 0, 0.8);
+  }
+  
+  .customerItem.fadeOut {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  
+  .customerItem:nth-child(odd):not(.serving) {
+    background: linear-gradient(to right, rgba(51, 51, 51, 0.7), rgba(85, 85, 85, 0.7));
+  }
+  
+  .customerItem:nth-child(even):not(.serving) {
+    background: linear-gradient(to right, rgba(85, 85, 85, 0.7), rgba(119, 119, 119, 0.7));
+  }
+  
+  @keyframes knightRider {
+    0% {
+      box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+      box-shadow: 0 0 15px 4px rgba(255, 255, 255, 1);
+    }
+    100% {
+      box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+  .statusContainer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .statusList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .statusItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .statusCircle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .statusCircle.pending {
+    background-color: red;
+  }
+  
+  .statusCircle.ready {
+    background-color: green;
+  }
+  
