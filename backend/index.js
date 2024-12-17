@@ -11,12 +11,20 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: '*',
+    origin: 'https://queue-management-system-2-0-t3kg.vercel.app',
+    methods: ['GET', 'POST'],
+    credentials: true,
   },
 });
 
+
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://queue-management-system-2-0-t3kg.vercel.app', // Allow requests from your frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
+  credentials: true, // If cookies or credentials are used
+}));
+
 app.use(express.json());
 
 // Multer setup for file uploads
